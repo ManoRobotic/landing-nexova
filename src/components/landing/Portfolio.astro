@@ -1,0 +1,121 @@
+---
+const portfolioItems = [
+  {
+    title: "E-commerce Platform",
+    description: "A scalable e-commerce solution with modern UI/UX and payment integration.",
+    image: "/images/screenshots/ecommerce-home.png",
+    category: "Web Development",
+    technologies: ["React", "Node.js", "MongoDB"],
+    year: "2024"
+  },
+  {
+    title: "Mobile Banking App",
+    description: "Secure mobile application that increased client's mobile user engagement by 150% and helped secure $15M Series B funding.",
+    image: "/images/screenshots/banking-dashboard.png",
+    category: "Mobile Development",
+    technologies: ["React Native", "Firebase", "Node.js"],
+    year: "2023"
+  },
+  {
+    title: "Fitness & Wellness App",
+    description: "Cross-platform mobile application with 500K+ downloads that generated $2.3M in first-year revenue.",
+    image: "/images/screenshots/fitness-home.png",
+    category: "Mobile Development",
+    technologies: ["Flutter", "Node.js", "MongoDB"],
+    year: "2024"
+  },
+  {
+    title: "SaaS Dashboard",
+    description: "Comprehensive analytics dashboard for SaaS businesses with real-time data.",
+    image: "/images/screenshots/saas-analytics.png",
+    category: "Web Application",
+    technologies: ["Vue.js", "Express", "PostgreSQL"],
+    year: "2024"
+  },
+  {
+    title: "Healthcare Management System",
+    description: "HIPAA-compliant system for managing patient records and appointments.",
+    image: "/images/screenshots/healthcare-dashboard.png",
+    category: "Enterprise Solution",
+    technologies: ["Angular", "Spring Boot", "MySQL"],
+    year: "2023"
+  },
+  {
+    title: "AI-Powered Analytics Tool",
+    description: "Machine learning platform for predictive analytics and data visualization.",
+    image: "/images/screenshots/ai-dashboard.png",
+    category: "AI/ML Solution",
+    technologies: ["Python", "TensorFlow", "React"],
+    year: "2024"
+  },
+  {
+    title: "IoT Dashboard",
+    description: "Real-time monitoring interface for IoT devices and sensor networks.",
+    image: "/images/screenshots/iot-dashboard.png",
+    category: "IoT Solution",
+    technologies: ["React", "WebSocket", "Node.js"],
+    year: "2023"
+  }
+];
+---
+
+<section id="portfolio" class="py-20 bg-gray-50">
+  <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+    <div class="text-center max-w-2xl mx-auto lg:text-balance">
+      <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+        OUR PORTFOLIO
+      </p>
+      <h2
+        class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900 lg:text-balance">
+        Premium Projects
+      </h2>
+      <p class="text-base leading-normal mt-4 text-base-500 font-medium">
+        Explore our diverse portfolio of premium software solutions across various industries.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+      {
+        portfolioItems.map((item) => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="h-48 overflow-hidden">
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                class="w-full h-full object-cover"
+                width="400"
+                height="300"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold text-base-900">{item.title}</h3>
+                <span class="text-xs bg-accent-100 text-accent-800 px-2 py-1 rounded-full">{item.year}</span>
+              </div>
+              <p class="text-base-500 mb-3">{item.description}</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                {item.technologies.map(tech => (
+                  <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">{tech}</span>
+                ))}
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-accent-600 font-medium">{item.category}</span>
+                <button class="text-sm text-accent-600 hover:text-accent-800 font-medium">
+                  View Case Study →
+                </button>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="text-center mt-12">
+      <a 
+        href="/contact"
+        class="inline-flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-white bg-accent-600 hover:bg-accent-700 focus:ring-accent-700/50 h-9 px-6 py-2 text-sm font-medium rounded-md">
+        View More Projects
+      </a>
+    </div>
+  </div>
+</section>

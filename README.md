@@ -68,7 +68,7 @@ Feel free to check Astro's [documentation](https://docs.astro.build)
 
 ### Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/bekturaslan/syntro-astro)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/bekturaslan/nexova-astro)
 
 ---
 Maintained & updated by Bektur Aslan. Contributions welcome.

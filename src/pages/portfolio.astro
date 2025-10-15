@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Portfolio from "../components/landing/Portfolio.astro";
+---
+
+<BaseLayout>
+  <div class="py-20">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="text-center max-w-2xl mx-auto lg:text-balance">
+        <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+          PROVEN SUCCESS STORIES
+        </p>
+        <h1
+          class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900 lg:text-balance">
+          Investor-Backed Solutions
+        </h1>
+        <p class="text-base leading-normal mt-4 text-base-500 font-medium">
+          Demonstrated results from our portfolio of high-impact software solutions.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="py-16 bg-gray-50">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 overflow-hidden">
+            <img 
+              src="/images/screenshots/ecommerce-home.png" 
+              alt="E-commerce Platform" 
+              class="w-full h-full object-cover"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-base-900">E-commerce Platform</h3>
+              <span class="text-xs bg-accent-100 text-accent-800 px-2 py-1 rounded-full">2024</span>
+            </div>
+            <p class="text-base-500 mb-3">Scalable solution that increased client revenue by 65% in first year.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">React</span>
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">Node.js</span>
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">MongoDB</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-accent-600 font-medium">Retail</span>
+              <button class="text-sm text-accent-600 hover:text-accent-800 font-medium">
+                Case Study →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 overflow-hidden">
+            <img 
+              src="/images/screenshots/banking-dashboard.png" 
+              alt="Mobile Banking App" 
+              class="w-full h-full object-cover"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-base-900">Mobile Banking App</h3>
+              <span class="text-xs bg-accent-100 text-accent-800 px-2 py-1 rounded-full">2023</span>
+            </div>
+            <p class="text-base-500 mb-3">Secure platform that helped client secure $10M Series A funding.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">React Native</span>
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">Firebase</span>
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">Node.js</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-accent-600 font-medium">FinTech</span>
+              <button class="text-sm text-accent-600 hover:text-accent-800 font-medium">
+                Case Study →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 overflow-hidden">
+            <img 
+              src="/images/screenshots/saas-analytics.png" 
+              alt="SaaS Analytics" 
+              class="w-full h-full object-cover"
+              width="400"
+              height="300"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-base-900">SaaS Analytics</h3>
+              <span class="text-xs bg-accent-100 text-accent-800 px-2 py-1 rounded-full">2024</span>
+            </div>
+            <p class="text-base-500 mb-3">Analytics platform that increased client MRR by 80% through data insights.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">Vue.js</span>
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">Express</span>
+              <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">PostgreSQL</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-accent-600 font-medium">Analytics</span>
+              <button class="text-sm text-accent-600 hover:text-accent-800 font-medium">
+                Case Study →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-16 bg-white p-8 rounded-xl shadow-lg">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl font-semibold text-base-900 mb-2">Investor Confidence Through Proven Results</h2>
+          <p class="text-base-500">Our portfolio companies have collectively raised over $120M in funding</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div class="text-3xl font-bold text-accent-600">$120M+</div>
+            <div class="text-sm text-base-500">Funding Raised by Clients</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-accent-600">3.2x</div>
+            <div class="text-sm text-base-500">Average ROI</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-accent-600">18mo</div>
+            <div class="text-sm text-base-500">Avg. Time to ROI</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-accent-600">95%</div>
+            <div class="text-sm text-base-500">On-Time Delivery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <Portfolio id="portfolio" />
+</BaseLayout>

@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import WhyChooseUs from "../components/landing/WhyChooseUs.astro";
+---
+
+<BaseLayout>
+  <div class="py-20">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="text-center max-w-2xl mx-auto lg:text-balance">
+        <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+          ABOUT US
+        </p>
+        <h1
+          class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900 lg:text-balance">
+          Proven Excellence in Software Development
+        </h1>
+        <p class="text-base leading-normal mt-4 text-base-500 font-medium">
+          We deliver high-impact software solutions with measurable ROI and scalable architecture.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="py-16 bg-gray-50">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-2xl font-semibold text-base-900 mb-4">Our Proven Track Record</h2>
+          <p class="text-base-500 mb-6">
+            With over 5 years of experience, we've delivered 200+ successful projects for Fortune 500 companies and innovative startups alike. Our solutions have driven measurable business outcomes including 35% average efficiency improvements and 25% cost reductions for our clients.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-accent-600">200+</div>
+              <div class="text-sm text-base-500">Projects Delivered</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-accent-600">98%</div>
+              <div class="text-sm text-base-500">Client Retention</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-accent-600">4.9/5</div>
+              <div class="text-sm text-base-500">Client Rating</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-accent-600">50+</div>
+              <div class="text-sm text-base-500">Enterprise Clients</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-base-900 mb-4">Investment-Backed Growth</h3>
+            <p class="text-base-500 mb-4">
+              We've successfully helped our clients secure over $50M in follow-on funding by developing robust, scalable software solutions that demonstrate clear business value.
+            </p>
+            <ul class="space-y-2 text-base-500">
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-accent-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Proven ROI for client investments</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-accent-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Scalable architectures for business growth</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-accent-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Industry-leading security and compliance</span>
+              </li>
+            </ul>
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-accent-600 w-32 h-32 rounded-lg opacity-20"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <WhyChooseUs id="about" />
+</BaseLayout>

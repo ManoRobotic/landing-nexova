@@ -7,14 +7,78 @@ import Pricing from "../components/landing/Pricing.astro";
 import WhyChooseUs from "../components/landing/WhyChooseUs.astro";
 import HowItWorks from "../components/landing/HowItWorks.astro";
 import Testimonial from "../components/global/Testimonial.astro";
+import Portfolio from "../components/landing/Portfolio.astro";
 ---
 
 <BaseLayout>
-  <Hero />
-  <SectionOne />
-  <SectionTwo />
-  <WhyChooseUs />
+  <div class="bg-gradient-to-br from-blue-50 via-white to-blue-100">
+    <div class="px-8 pt-32 pb-20 mx-auto md:px-12 lg:px-24 max-w-7xl relative">
+      <div class="max-w-3xl text-center mx-auto lg:text-balance mb-10">
+        <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+          PROVEN BUSINESS SOLUTIONS
+        </p>
+        <h1
+          class="text-xl/snug leading-tight tracking-tight sm:text-2xl/snug md:text-3xl/snug capitalize lg:text-4xl/snug mt-4 font-medium text-base-900">
+          Transform Your Business with Investor-Backed Software Solutions
+        </h1>
+        <p class="text-base leading-normal mt-4 text-base-500 font-medium">
+          We deliver measurable business outcomes with proven ROI. Our solutions have helped clients secure over $120M in funding.
+        </p>
+        <div
+          class="flex flex-wrap items-center gap-4 justify-center mx-auto mt-10">
+          <a
+            href="/contact"
+            class="flex items-center justify-center transition-all duration-200 ring-1 focus:ring-2 focus:outline-none text-white bg-accent-600 hover:bg-accent-700 focus:ring-accent-700/50 h-12 px-6 py-3 text-base font-medium rounded-md">
+            Discuss Your Investment
+          </a>
+          <a
+            href="/mobile-apps"
+            class="flex items-center justify-center transition-all duration-200 ring-1 focus:ring-2 focus:outline-none text-base-500 bg-white hover:bg-accent-100 ring-1 ring-base-200 focus:ring-accent-100 hover:text-accent-600 h-12 px-6 py-3 text-base font-medium rounded-md">
+            Mobile Solutions
+          </a>
+          <a
+            href="/portfolio"
+            class="flex items-center justify-center transition-all duration-200 ring-1 focus:ring-2 focus:outline-none text-base-500 bg-white hover:bg-accent-100 ring-1 ring-base-200 focus:ring-accent-100 hover:text-accent-600 h-12 px-6 py-3 text-base font-medium rounded-md">
+            View Success Stories
+          </a>
+        </div>
+      </div>
+      
+      <div class="flex justify-center mb-16">
+        <div class="flex -space-x-4">
+          <img src="/images/screenshots/banking-icon.png" alt="Banking App" class="w-16 h-16 rounded-xl object-cover" />
+          <img src="/images/screenshots/fitness-icon.png" alt="Fitness App" class="w-16 h-16 rounded-xl object-cover" />
+          <img src="/images/screenshots/ecommerce-icon.png" alt="E-commerce App" class="w-16 h-16 rounded-xl object-cover" />
+          <img src="/images/screenshots/saas-icon.png" alt="SaaS App" class="w-16 h-16 rounded-xl object-cover" />
+          <img src="/images/screenshots/ai-icon.png" alt="AI App" class="w-16 h-16 rounded-xl object-cover" />
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-accent-600">120M+</div>
+          <div class="text-sm text-base-500">Funding Secured by Clients</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-accent-600">300-500%</div>
+          <div class="text-sm text-base-500">Average ROI</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-accent-600">200+</div>
+          <div class="text-sm text-base-500">Successful Projects</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-accent-600">18mo</div>
+          <div class="text-sm text-base-500">Avg. ROI Timeline</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <SectionOne id="services" />
+  <SectionTwo id="solutions" />
+  <WhyChooseUs id="about" />
   <HowItWorks />
-  <Pricing />
-  <Testimonial />
+  <Portfolio id="portfolio" />
+  <Testimonial id="testimonials" />
 </BaseLayout>

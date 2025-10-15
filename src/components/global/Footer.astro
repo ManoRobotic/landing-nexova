@@ -3,44 +3,56 @@ import OptimizedImage from "../../layouts/utilities/OptimizedImage.astro";
 
 const sections = [
   {
-    title: "All pages",
+    title: "Solutions",
     links: [
-      { name: "Home", href: "/" },
-      { name: "About", href: "/about" },
-      { name: "Features", href: "/features" },
-      { name: "Pricing", href: "/pricing" },
-      { name: "FAQ", href: "/faq" },
-      { name: "Contact", href: "/contact" },
+      { name: "Web Development", href: "/web-development" },
+      { name: "Mobile Apps", href: "/mobile-apps" },
+      { name: "Custom Software", href: "/custom-software" },
+      { name: "API Development", href: "/api-development" },
+      { name: "UI/UX Design", href: "/ui-ux-design" },
+      { name: "Consulting", href: "/consulting" },
+    ],
+  },
+  {
+    title: "Portfolio",
+    links: [
+      { name: "Web Applications", href: "/portfolio#web" },
+      { name: "Mobile Apps", href: "/portfolio#mobile" },
+      { name: "E-commerce", href: "/portfolio#ecommerce" },
+      { name: "Enterprise", href: "/portfolio#enterprise" },
+      { name: "Startups", href: "/portfolio#startups" },
+      { name: "Case Studies", href: "/case-studies" },
     ],
   },
   {
     title: "Company",
     links: [
-      { name: "Careers", href: "/careers" },
-      { name: "Press", href: "/press" },
-      { name: "Blog", href: "/blog" },
-      { name: "Partners", href: "/partners" },
-      { name: "Terms", href: "/terms" },
-      { name: "Privacy", href: "/privacy" },
+      { name: "About Us", href: "/about" },
+      { name: "Our Services", href: "/services" },
+      { name: "Mobile Apps", href: "/mobile-apps" },
+      { name: "Solutions", href: "/solutions" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "Portfolio", href: "/portfolio" },
+      { name: "Contact", href: "/contact" },
     ],
   },
   {
-    title: "Developers",
+    title: "Resources",
     links: [
       { name: "Documentation", href: "/docs" },
-      { name: "API Reference", href: "/api" },
-      { name: "Status", href: "/status" },
-      { name: "Github", href: "https://github.com/bekturaslan/syntro-astro" },
-      { name: "Changelog", href: "/changelog" },
+      { name: "Tutorials", href: "/tutorials" },
+      { name: "Knowledge Base", href: "/knowledge-base" },
+      { name: "GitHub", href: "https://github.com/yourcompany" },
+      { name: "Tech Blog", href: "/tech-blog" },
     ],
   },
   {
     title: "Support",
     links: [
       { name: "Help Center", href: "/help" },
-      { name: "Community", href: "/community" },
-      { name: "Contact Support", href: "/support" },
-      { name: "Live Chat", href: "/chat" },
+      { name: "Contact Us", href: "/contact" },
+      { name: "Project Inquiries", href: "/inquiry" },
+      { name: "Technical Support", href: "/support" },
     ],
   },
 ];
@@ -52,13 +64,12 @@ const sections = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
       <div class="md:col-span-1">
         <a href="/" class="inline-flex items-center gap-3">
-          <OptimizedImage width={40} src="/logo.svg" alt="logo" />
-          <span class="text-lg font-semibold text-black">Syntro</span>
-        </a>
-        <p class="mt-4 text-sm text-gray-500">
-          Open-source SaaS starter built with Astro & Tailwind CSS. Customize
-          freely and deploy with ease.
-        </p>
+        <OptimizedImage width={40} src="/logo.svg" alt="nexova Consulting Logo" />
+        <span class="text-lg font-semibold text-black">nexova Consulting</span>
+      </a>
+      <p class="mt-4 text-sm text-gray-500">
+        Professional custom software consulting services. We provide strategic solutions for your business needs.
+      </p>
       </div>
 
       <div class="md:col-span-2">
@@ -66,8 +77,7 @@ const sections = [
           Subscribe to our newsletter
         </h3>
         <p class="text-sm text-gray-500 mb-4">
-          Join 1,000+ developers and get product updates, tips, and insights in
-          your inbox.
+          Join 500+ businesses and get technology insights, development tips, and industry trends in your inbox.
         </p>
         <form class="flex flex-col sm:flex-row items-center gap-3 w-full">
           <input
@@ -108,15 +118,9 @@ const sections = [
     <div
       class="pt-12 mt-12 border-t border-base-200 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
       <p>
-        &copy; {new Date().getFullYear()} Your Company Name. Crafted by Michael Andreuzza
-        &
-        <a
-          href="https://getastrothemes.com/free-astro-themes-templates/"
-          class="underline text-blue-600 hover:text-blue-800">
-          Getastrothemes
-        </a>
+        &copy; {new Date().getFullYear()} nexova Consulting. All rights reserved.
       </p>
-      <p>Additionally Development by Bektur Aslan</p>
+      <p>Custom software consulting | Made with ❤️ for innovation</p>
     </div>
   </div>
 </footer>
