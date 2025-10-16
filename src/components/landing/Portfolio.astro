@@ -87,6 +87,10 @@ const portfolioItems = [
         portfolioItems.map((item) => (
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
             <a href={
+              item.title === "Fitness & Wellness App" ?
+                "https://v0-fitness-wellness-app.vercel.app/" :
+              item.title === "Financial Dashboard" ?
+                "https://v0-financial-dashboard-eta-black-46.vercel.app/dashboard" :
               item.title === "Mobile Banking App" ?
                 "https://v0-mobile-banking-app-self.vercel.app/" :
               item.title === "IoT Dashboard" ?
