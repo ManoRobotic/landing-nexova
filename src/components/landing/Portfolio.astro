@@ -19,7 +19,7 @@ const portfolioItems = [
   {
     title: "Fitness & Wellness App",
     description: "Cross-platform mobile application with 500K+ downloads that generated $2.3M in first-year revenue.",
-    image: "/images/screenshots/fitness-home.png",
+    image: "/images/fitDash.webp",
     category: "Mobile Development",
     technologies: ["Flutter", "Node.js", "MongoDB"],
     year: "2024"
@@ -55,6 +55,14 @@ const portfolioItems = [
     category: "IoT Solution",
     technologies: ["React", "WebSocket", "Node.js"],
     year: "2023"
+  },
+    {
+    title: "Financial Dashboard",
+    description: "Interactive platform for tracking investments and market trends.",
+    image: "/images/financialDash.webp",
+    category: "FinTech Solution",
+    technologies: ["D3.js", "Node.js", "PostgreSQL"],
+    year: "2021"
   }
 ];
 ---
@@ -84,7 +92,7 @@ const portfolioItems = [
               item.title === "IoT Dashboard" ?
                 "https://v0-io-t-temperature-dashboard.vercel.app/" : "#"}
             class="block">
-            
+
               <div class="h-auto overflow-hidden">
                 <img 
                   src={item.image} 
