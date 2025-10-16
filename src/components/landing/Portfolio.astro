@@ -2,18 +2,18 @@
 const portfolioItems = [
   {
     title: "Mobile Banking App",
-    description: "Secure mobile application that increased client's mobile user engagement by 150% and helped secure $15M Series B funding.",
+    description: "Secure mobile application that demonstrated significant improvements in user engagement and served as a model for successful funding rounds.",
     image: "/images/mobileBank.webp",
     category: "Mobile Development",
     technologies: ["React Native", "Firebase", "Node.js"],
     year: "2023"
   },
   {
-    title: "Fitness & Wellness App",
-    description: "Cross-platform mobile application with 500K+ downloads that generated $2.3M in first-year revenue.",
-    image: "/images/fitDash.webp",
-    category: "Mobile Development",
-    technologies: ["Flutter", "Node.js", "MongoDB"],
+    title: "AI-Powered Analytics Tool",
+    description: "Advanced AI and cognitive automation platform for predictive analytics and intelligent data visualization.",
+    image: "/images/n8n.webp",
+    category: "AI/ML Solution",
+    technologies: ["Python", "TensorFlow", "React"],
     year: "2024"
   },
   {
@@ -33,11 +33,11 @@ const portfolioItems = [
   //   year: "2023"
   // },
   {
-    title: "AI-Powered Analytics Tool",
-    description: "Advanced AI and cognitive automation platform for predictive analytics and intelligent data visualization.",
-    image: "/images/n8n.webp",
-    category: "AI/ML Solution",
-    technologies: ["Python", "TensorFlow", "React"],
+    title: "Fitness & Wellness App",
+    description: "Cross-platform mobile application that achieved significant download numbers and demonstrated strong revenue potential in the wellness market.",
+    image: "/images/fitDash.webp",
+    category: "Mobile Development",
+    technologies: ["Flutter", "Node.js", "MongoDB"],
     year: "2024"
   },
   {
@@ -105,7 +105,7 @@ const portfolioItems = [
               <div class="p-6">
                 <div class="flex justify-between items-start mb-2">
                   <h3 class="text-xl font-semibold text-base-900">{item.title}</h3>
-                  <span class="text-xs bg-accent-100 text-accent-800 px-2 py-1 rounded-full">{item.year}</span>
+                  <span class="text-xs bg-white text-accent-600 px-2 py-1 rounded-full border border-accent-600">{item.year}</span>
                 </div>
                 <p class="text-base-500 mb-3">{item.description}</p>
                 <div class="flex flex-wrap gap-2 mb-4">
