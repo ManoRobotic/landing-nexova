@@ -31,6 +31,32 @@
   --color-base-800: #1f2937;
   --color-base-900: #111827;
   --color-base-950: #030712;
+  /* Dark Mode Base */
+  --color-base-25: #0a0a0b;
+  --color-base-50: #0d0d0e;
+  --color-base-100: #111112;
+  --color-base-200: #171718;
+  --color-base-300: #262628;
+  --color-base-400: #404043;
+  --color-base-500: #525256;
+  --color-base-600: #636368;
+  --color-base-700: #7b7b81;
+  --color-base-800: #a1a1a6;
+  --color-base-900: #d4d4d5;
+  --color-base-950: #eeeff0;
+  /* Dark Mode Accent */
+  --color-accent-25: #0e1424;
+  --color-accent-50: #11192e;
+  --color-accent-100: #162447;
+  --color-accent-200: #1d3262;
+  --color-accent-300: #244382;
+  --color-accent-400: #2c56a6;
+  --color-accent-500: #386bd4;
+  --color-accent-600: #4882f2;
+  --color-accent-700: #5e99ff;
+  --color-accent-800: #77adff;
+  --color-accent-900: #97c2ff;
+  --color-accent-950: #d2e6ff;
 }
 
 /* CSS */

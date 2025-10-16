@@ -1,14 +1,6 @@
 ---
 const portfolioItems = [
   {
-    title: "E-commerce Platform",
-    description: "A scalable e-commerce solution with modern UI/UX and payment integration.",
-    image: "/images/screenshots/ecommerce-home.png",
-    category: "Web Development",
-    technologies: ["React", "Node.js", "MongoDB"],
-    year: "2024"
-  },
-  {
     title: "Mobile Banking App",
     description: "Secure mobile application that increased client's mobile user engagement by 150% and helped secure $15M Series B funding.",
     image: "/images/mobileBank.webp",
@@ -25,11 +17,11 @@ const portfolioItems = [
     year: "2024"
   },
   {
-    title: "SaaS Dashboard",
-    description: "Comprehensive analytics dashboard for SaaS businesses with real-time data.",
-    image: "/images/screenshots/saas-analytics.png",
+    title: "WMS Warehouse Management System",
+    description: "Advanced warehouse management solution for efficient inventory tracking and logistics operations. Schedule a demo to see the platform in action.",
+    image: "/images/wms.webp",
     category: "Web Application",
-    technologies: ["Vue.js", "Express", "PostgreSQL"],
+    technologies: ["React", "Node.js", "PostgreSQL"],
     year: "2024"
   },
   // {
@@ -42,8 +34,8 @@ const portfolioItems = [
   // },
   {
     title: "AI-Powered Analytics Tool",
-    description: "Machine learning platform for predictive analytics and data visualization.",
-    image: "/images/screenshots/ai-dashboard.png",
+    description: "Advanced AI and cognitive automation platform for predictive analytics and intelligent data visualization.",
+    image: "/images/n8n.webp",
     category: "AI/ML Solution",
     technologies: ["Python", "TensorFlow", "React"],
     year: "2024"
@@ -87,6 +79,8 @@ const portfolioItems = [
         portfolioItems.map((item) => (
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
             <a href={
+              item.title === "WMS Warehouse Management System" ?
+                "https://wmsys.fly.dev/" :
               item.title === "Fitness & Wellness App" ?
                 "https://v0-fitness-wellness-app.vercel.app/" :
               item.title === "Financial Dashboard" ?
@@ -94,14 +88,16 @@ const portfolioItems = [
               item.title === "Mobile Banking App" ?
                 "https://v0-mobile-banking-app-self.vercel.app/" :
               item.title === "IoT Dashboard" ?
-                "https://v0-io-t-temperature-dashboard.vercel.app/" : "#"}
+                "https://v0-io-t-temperature-dashboard.vercel.app/" :
+              item.title === "AI-Powered Analytics Tool" ?
+                "/automation-services" : "#"}
             class="block">
 
               <div class="h-auto overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  class="w-full aspect-square object-contain"
+                  class={item.title === "WMS Warehouse Management System" || item.title === "IoT Dashboard" || item.title === "AI-Powered Analytics Tool" ? "w-full aspect-square object-cover" : "w-full aspect-square object-contain"}
                   width="400"
                   height="400"
                 />

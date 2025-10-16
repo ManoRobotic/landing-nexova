@@ -14,7 +14,7 @@
     </div>
 
     <div
-      class="relative py-12 mx-auto overflow-hidden overflow-x-hidden 2xl:max-w-screen-xl">
+      class="relative py-12 mx-auto overflow-hidden 2xl:max-w-screen-xl">
       <div class="grid justify-between w-full">
         <div
           class="absolute inset-0 left-0 z-10 from-white via-transparent w-44 bg-gradient-to-r">
@@ -23,42 +23,42 @@
           class="absolute inset-0 left-0 z-10 ml-auto from-white via-transparent w-44 bg-gradient-to-l">
         </div>
       </div>
-      <div class="relative flex items-center gap-2 whitespace-nowrap t">
+      <div class="relative flex items-center gap-2 whitespace-nowrap t overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" id="services-container">
         <span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           Strategic Consulting
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           Custom Development
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           System Architecture
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           Cloud Solutions
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           API Development
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           UI/UX Design
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           DevOps & Deployment
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           Quality Assurance
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           Digital Transformation
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           Software Maintenance
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           Security Consulting
         </span><span
-          class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+          class="inline-flex items-center font-medium relative text-gray-600 bg-gray-100 px-4 py-1.5 text-sm rounded-lg">
           Technical Audit
         </span>
       </div>
@@ -183,3 +183,49 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('services-container');
+    
+    if (container) {
+      let isPaused = false;
+      const scrollStep = 1; // pixels to move per frame
+      const scrollDelay = 30; // milliseconds between frames
+      
+      // Function to scroll the container
+      function autoScroll() {
+        if (!isPaused) {
+          // If we've reached the end, reset to the beginning
+          if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+            container.scrollLeft = 0;
+          } else {
+            // Otherwise, continue scrolling
+            container.scrollLeft += scrollStep;
+          }
+        }
+      }
+      
+      // Start the auto-scrolling
+      const scrollInterval = setInterval(autoScroll, scrollDelay);
+      
+      // Pause scrolling when user interacts with the container
+      container.addEventListener('mouseenter', () => {
+        isPaused = true;
+      });
+      
+      container.addEventListener('mouseleave', () => {
+        isPaused = false;
+      });
+      
+      // Also pause when user clicks or touches
+      container.addEventListener('mousedown', () => {
+        isPaused = true;
+      });
+      
+      container.addEventListener('touchstart', () => {
+        isPaused = true;
+      });
+    }
+  });
+</script>
