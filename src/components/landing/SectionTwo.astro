@@ -1,5 +1,5 @@
 ---
-import OptimizedImage from "../../layouts/utilities/OptimizedImage.astro";
+import AnalyticsDashboard from "../react/AnalyticsDashboard.tsx";
 ---
 
 <section>
@@ -7,14 +7,14 @@ import OptimizedImage from "../../layouts/utilities/OptimizedImage.astro";
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
       <div class="lg:order-last">
         <p class="text-sm leading-normal font-bold uppercase text-accent-600">
-          OUR APPROACH
+          REAL-TIME INTELLIGENCE
         </p>
         <h2
           class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900">
-          Strategic Consulting Methodology
+          Data-Driven Solutions Tailored to Your Business
         </h2>
         <p class="text-base leading-normal mt-4 text-base-500 font-medium">
-          We follow proven consulting methodologies to deliver strategic solutions that transform your business and drive measurable results.
+          Monitor your business metrics in real-time with custom analytics dashboards. We build intelligent solutions that adapt to your unique needs and provide actionable insights for growth.
         </p>
         <div class="flex flex-wrap items-center gap-2 mx-auto mt-12">
           <a
@@ -30,16 +30,8 @@ import OptimizedImage from "../../layouts/utilities/OptimizedImage.astro";
         </div>
       </div>
       <div class="lg:col-span-2">
-        <div class="p-5 bg-accent-50 rounded-2xl">
-          <OptimizedImage
-            src="/dashboard.png"
-            alt="#_"
-            width={900}
-            height={500}
-            loading={"eager"}
-            fetchpriority="high"
-            class="relative w-full ring-4 ring-base-50 border border-base-200 lg:rounded-2xl object-cover rounded"
-          />
+        <div class="p-5 bg-white rounded-2xl">
+          <AnalyticsDashboard client:load />
         </div>
       </div>
     </div>
