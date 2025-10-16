@@ -11,7 +11,7 @@ const portfolioItems = [
   {
     title: "Mobile Banking App",
     description: "Secure mobile application that increased client's mobile user engagement by 150% and helped secure $15M Series B funding.",
-    image: "/images/mobileBank.png",
+    image: "/images/mobileBank.webp",
     category: "Mobile Development",
     technologies: ["React Native", "Firebase", "Node.js"],
     year: "2023"
@@ -51,7 +51,7 @@ const portfolioItems = [
   {
     title: "IoT Dashboard",
     description: "Real-time monitoring interface for IoT devices and sensor networks.",
-    image: "/images/screenshots/iot-dashboard.png",
+    image: "/images/iotDash.webp",
     category: "IoT Solution",
     technologies: ["React", "WebSocket", "Node.js"],
     year: "2023"
@@ -78,33 +78,41 @@ const portfolioItems = [
       {
         portfolioItems.map((item) => (
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 overflow-hidden">
-              <img 
-                src={item.image} 
-                alt={item.title} 
-                class="w-full h-full object-cover"
-                width="400"
-                height="300"
-              />
-            </div>
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-semibold text-base-900">{item.title}</h3>
-                <span class="text-xs bg-accent-100 text-accent-800 px-2 py-1 rounded-full">{item.year}</span>
+            <a href={
+              item.title === "Mobile Banking App" ?
+                "https://v0-mobile-banking-app-self.vercel.app/" :
+              item.title === "IoT Dashboard" ?
+                "https://v0-io-t-temperature-dashboard.vercel.app/" : "#"}
+            class="block">
+            
+              <div class="h-auto overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  class="w-full aspect-square object-contain"
+                  width="400"
+                  height="400"
+                />
               </div>
-              <p class="text-base-500 mb-3">{item.description}</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                {item.technologies.map(tech => (
-                  <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">{tech}</span>
-                ))}
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-semibold text-base-900">{item.title}</h3>
+                  <span class="text-xs bg-accent-100 text-accent-800 px-2 py-1 rounded-full">{item.year}</span>
+                </div>
+                <p class="text-base-500 mb-3">{item.description}</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  {item.technologies.map(tech => (
+                    <span class="text-xs bg-gray-100 text-base-800 px-2 py-1 rounded">{tech}</span>
+                  ))}
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-accent-600 font-medium">{item.category}</span>
+                  <button class="text-sm text-accent-600 hover:text-accent-800 font-medium">
+                    View Case Study →
+                  </button>
+                </div>
               </div>
-              <div class="flex justify-between items-center">
-                <span class="text-sm text-accent-600 font-medium">{item.category}</span>
-                <button class="text-sm text-accent-600 hover:text-accent-800 font-medium">
-                  View Case Study →
-                </button>
-              </div>
-            </div>
+            </a>
           </div>
         ))
       }
