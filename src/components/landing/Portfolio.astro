@@ -55,6 +55,14 @@ const portfolioItems = [
     category: "FinTech Solution",
     technologies: ["D3.js", "Node.js", "PostgreSQL"],
     year: "2021"
+  },
+  {
+    title: "Medical Dashboard",
+    description: "Comprehensive management system for pharmacies, hospitals, and clinics",
+    image: "/images/medical.webp",
+    category: "Healthcare Solution",
+    technologies: ["React", "Node.js", "MongoDB"],
+    year: "2024"
   }
 ];
 ---
@@ -90,7 +98,9 @@ const portfolioItems = [
               item.title === "IoT Dashboard" ?
                 "https://v0-io-t-temperature-dashboard.vercel.app/" :
               item.title === "AI-Powered Analytics Tool" ?
-                "/automation-services" : "#"}
+                "/automation-services" :
+              item.title === "Medical Dashboard" ?
+                "https://v0-medical-app-patent-theta.vercel.app/" : "#"}
             class="block">
 
               <div class="h-auto overflow-hidden">
@@ -115,9 +125,6 @@ const portfolioItems = [
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="text-sm text-accent-600 font-medium">{item.category}</span>
-                  <button class="text-sm text-accent-600 hover:text-accent-800 font-medium">
-                    View Case Study →
-                  </button>
                 </div>
               </div>
             </a>

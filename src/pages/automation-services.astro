@@ -1,55 +1,74 @@
 ---
-title: "AI Automation Services | Syntro"
-description: "Advanced automation agent services and solutions for businesses looking to optimize operations with AI technology."
-layout: "../layouts/Base.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-import BaseHead from "../components/BaseHead.astro";
-
-<BaseHead title="AI Automation Services" description="Advanced automation agent services and solutions" />
-
-<div class="relative py-20 bg-gradient-to-b from-gray-50 to-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-        <span class="text-accent-600">AI-Driven</span> Automation Agents
-      </h1>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Transform your business operations with intelligent AI solutions that learn, adapt, and optimize workflows for maximum efficiency and innovation.
-      </p>
+<BaseLayout>
+  <div class="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="text-center max-w-3xl mx-auto lg:text-balance">
+        <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+          AI-DRIVEN AUTOMATION
+        </p>
+        <h1
+          class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900 lg:text-balance">
+          <span class="text-accent-600">AI-Driven</span> Automation Agents
+        </h1>
+        <p class="text-base leading-normal mt-4 text-base-500 font-medium max-w-3xl mx-auto">
+          Transform your business operations with intelligent AI solutions that learn, adapt, and optimize workflows for maximum efficiency and innovation.
+        </p>
+      </div>
+      
+      <div class="mt-16 bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div class="text-3xl font-bold text-accent-600">95%</div>
+            <div class="text-sm text-base-500">Process Automation</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-accent-600">60%</div>
+            <div class="text-sm text-base-500">Cost Reduction</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-accent-600">3.2x</div>
+            <div class="text-sm text-base-500">ROI Increase</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-accent-600">40%</div>
+            <div class="text-sm text-base-500">Efficiency Gain</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <div class="py-20 bg-gray-50">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">AI-Powered Automation Solutions</h2>
-          <p class="text-gray-600 mb-6">
+          <h2 class="text-2xl font-semibold text-base-900 mb-6">AI-Powered Automation Solutions</h2>
+          <p class="text-base-500 mb-6">
             Our cutting-edge AI agents are designed to handle complex tasks with human-like intelligence, featuring neural networks, natural language processing, and machine learning to deliver unprecedented efficiency across your business operations.
           </p>
-          <ul class="space-y-4">
+          <ul class="space-y-3">
             <li class="flex items-start">
-              <span class="text-accent-600 mr-3">✓</span>
-              <span class="text-gray-700">AI-driven decision making with neural networks and deep learning</span>
+              <span class="text-accent-600 mr-3 text-xl">✓</span>
+              <span class="text-base-700">AI-driven decision making with neural networks and deep learning</span>
             </li>
             <li class="flex items-start">
-              <span class="text-accent-600 mr-3">✓</span>
-              <span class="text-gray-700">Seamless integration with existing systems powered by cognitive AI</span>
+              <span class="text-accent-600 mr-3 text-xl">✓</span>
+              <span class="text-base-700">Seamless integration with existing systems powered by cognitive AI</span>
             </li>
             <li class="flex items-start">
-              <span class="text-accent-600 mr-3">✓</span>
-              <span class="text-gray-700">Adaptive learning agents with reinforcement learning that improve with each interaction</span>
+              <span class="text-accent-600 mr-3 text-xl">✓</span>
+              <span class="text-base-700">Adaptive learning agents with reinforcement learning that improve with each interaction</span>
             </li>
             <li class="flex items-start">
-              <span class="text-accent-600 mr-3">✓</span>
-              <span class="text-gray-700">Scalable cognitive AI solutions that grow with your business needs</span>
+              <span class="text-accent-600 mr-3 text-xl">✓</span>
+              <span class="text-base-700">Scalable cognitive AI solutions that grow with your business needs</span>
             </li>
           </ul>
         </div>
-        <div class="bg-gray-100 rounded-xl p-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
           <img 
             src="/images/n8n.webp" 
             alt="AI Automation Dashboard" 
@@ -59,71 +78,152 @@ import BaseHead from "../components/BaseHead.astro";
       </div>
     </div>
   </div>
-</div>
 
-<div class="py-16 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">AI Applications Across Industries</h2>
-      <p class="text-gray-600">Discover how our intelligent AI agents transform different aspects of your business</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <h3 class="text-xl font-semibold text-gray-900 mb-4">Intelligent Data Processing</h3>
-        <p class="text-gray-600">
-          Automated collection, cleaning, and analysis of large datasets with AI-powered insights and predictive recommendations.
+  <div class="py-20">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="text-center max-w-2xl mx-auto lg:text-balance mb-16">
+        <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+          INDUSTRY APPLICATIONS
+        </p>
+        <h2
+          class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900 lg:text-balance">
+          AI Applications Across Industries
+        </h2>
+        <p class="text-base leading-normal mt-4 text-base-500 font-medium">
+          Discover how our intelligent AI agents transform different aspects of your business
         </p>
       </div>
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <h3 class="text-xl font-semibold text-gray-900 mb-4">AI Customer Support</h3>
-        <p class="text-gray-600">
-          Intelligent chatbots with natural language processing that understand, learn, and resolve customer issues autonomously.
-        </p>
-      </div>
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <h3 class="text-xl font-semibold text-gray-900 mb-4">Cognitive Workflow Management</h3>
-        <p class="text-gray-600">
-          End-to-end process automation with AI agents that make intelligent decisions and optimize workflows in real-time.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">Our AI-First Approach</h2>
-      <div class="prose-lg text-left text-gray-600 max-w-3xl mx-auto">
-        <p class="mb-4">
-          We combine state-of-the-art artificial intelligence technology, including neural networks, natural language processing, and predictive analytics, with deep industry expertise to create cognitive automation solutions that deliver transformative business value.
-        </p>
-        <ol class="list-decimal list-inside space-y-2">
-          <li><strong>AI Assessment:</strong> We analyze your processes to identify where AI can provide the greatest impact.</li>
-          <li><strong>Cognitive Design:</strong> We create custom AI strategies tailored to your business objectives.</li>
-          <li><strong>Intelligent Development:</strong> Our AI agents utilize the latest neural networks, deep learning, and reinforcement learning.</li>
-          <li><strong>Smart Implementation:</strong> We seamlessly integrate cognitive AI solutions into your existing infrastructure.</li>
-          <li><strong>Adaptive Optimization:</strong> Continuous learning and improvement through advanced AI algorithms.</li>
-        </ol>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-transparent hover:border-accent-200">
+          <div class="text-accent-600 text-3xl mb-4">🤖</div>
+          <h3 class="text-xl font-semibold text-base-900 mb-4">Intelligent Data Processing</h3>
+          <p class="text-base-500">
+            Automated collection, cleaning, and analysis of large datasets with AI-powered insights and predictive recommendations.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-transparent hover:border-accent-200">
+          <div class="text-accent-600 text-3xl mb-4">💬</div>
+          <h3 class="text-xl font-semibold text-base-900 mb-4">AI Customer Support</h3>
+          <p class="text-base-500">
+            Intelligent chatbots with natural language processing that understand, learn, and resolve customer issues autonomously.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-transparent hover:border-accent-200">
+          <div class="text-accent-600 text-3xl mb-4">⚙️</div>
+          <h3 class="text-xl font-semibold text-base-900 mb-4">Cognitive Workflow Management</h3>
+          <p class="text-base-500">
+            End-to-end process automation with AI agents that make intelligent decisions and optimize workflows in real-time.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="py-16 bg-gradient-to-r from-accent-600 to-accent-700 text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Ready to Harness AI Power?</h2>
-      <p class="text-accent-100 mb-8 text-xl">
-        Let's discuss how our intelligent AI agents can revolutionize your business processes.
-      </p>
-      <a 
-        href="/contact" 
-        class="inline-block bg-white text-accent-600 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors"
-      >
-        Contact Us Today
-      </a>
+  <div class="py-20 bg-gray-50">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="text-center max-w-2xl mx-auto lg:text-balance mb-16">
+        <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+          AI TECHNOLOGIES
+        </p>
+        <h2
+          class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900 lg:text-balance">
+          Advanced AI Capabilities
+        </h2>
+        <p class="text-base leading-normal mt-4 text-base-500 font-medium max-w-3xl mx-auto">
+          We leverage the latest artificial intelligence technologies to create solutions that deliver transformative business value.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">🧠</div>
+          <h3 class="font-semibold text-base-900 mb-2">Neural Networks</h3>
+          <p class="text-sm text-base-500">Deep learning models that recognize complex patterns in data.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">💬</div>
+          <h3 class="font-semibold text-base-900 mb-2">NLP</h3>
+          <p class="text-sm text-base-500">Natural language processing for intelligent text analysis.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">🔍</div>
+          <h3 class="font-semibold text-base-900 mb-2">Machine Learning</h3>
+          <p class="text-sm text-base-500">Predictive models that improve with each interaction.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">🔄</div>
+          <h3 class="font-semibold text-base-900 mb-2">Reinforcement Learning</h3>
+          <p class="text-sm text-base-500">Adaptive systems that optimize through trial and error.</p>
+        </div>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto lg:text-balance mb-16">
+        <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+          OUR APPROACH
+        </p>
+        <h2
+          class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900 lg:text-balance">
+          Our AI-First Approach
+        </h2>
+        <p class="text-base leading-normal mt-4 text-base-500 font-medium max-w-3xl mx-auto">
+          We combine state-of-the-art artificial intelligence technology with deep industry expertise to create cognitive automation solutions that deliver transformative business value.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">1</div>
+          <h3 class="font-semibold text-base-900 mb-2">AI Assessment</h3>
+          <p class="text-sm text-base-500">Analyze your processes to identify where AI can provide the greatest impact.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">2</div>
+          <h3 class="font-semibold text-base-900 mb-2">Cognitive Design</h3>
+          <p class="text-sm text-base-500">Create custom AI strategies tailored to your business objectives.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">3</div>
+          <h3 class="font-semibold text-base-900 mb-2">Intelligent Development</h3>
+          <p class="text-sm text-base-500">AI agents utilizing the latest neural networks, deep learning, and reinforcement learning.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">4</div>
+          <h3 class="font-semibold text-base-900 mb-2">Smart Implementation</h3>
+          <p class="text-sm text-base-500">Integrate cognitive AI solutions into your existing infrastructure.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+          <div class="text-2xl font-bold text-accent-600 mb-3">5</div>
+          <h3 class="font-semibold text-base-900 mb-2">Adaptive Optimization</h3>
+          <p class="text-sm text-base-500">Continuous learning and improvement through advanced AI algorithms.</p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+
+  <div class="py-20 bg-gradient-to-br from-accent-600 to-accent-700 text-white">
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <div class="text-center max-w-2xl mx-auto lg:text-balance">
+        <h2
+          class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium lg:text-balance">
+          Ready to Harness AI Power?
+        </h2>
+        <p class="text-base leading-normal mt-4 text-accent-100 font-medium mb-8 max-w-xl mx-auto">
+          Let's discuss how our intelligent AI agents can revolutionize your business processes.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a 
+            href="/contact" 
+            class="inline-flex items-center justify-center transition-all duration-200 ring-1 focus:ring-2 focus:outline-none text-base-900 bg-white hover:bg-accent-100 ring-1 ring-white focus:ring-white/50 h-12 px-6 py-3 text-base font-medium rounded-md">
+            Contact Us Today
+          </a>
+          <a 
+            href="/about" 
+            class="inline-flex items-center justify-center transition-all duration-200 ring-1 focus:ring-2 focus:outline-none text-white bg-transparent hover:bg-accent-800 ring-1 ring-white focus:ring-white/50 h-12 px-6 py-3 text-base font-medium rounded-md">
+            Learn About Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
