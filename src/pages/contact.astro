@@ -128,39 +128,42 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             // Disable submit button and show loading state
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
+            formMessage.classList.add('hidden');
             
             try {
-              // In a real implementation, you would send the data to a backend service
-              // For now, we'll simulate sending an email by opening a mailto link
-              const subject = encodeURIComponent('Business Opportunity Inquiry from Contact Form');
-              const body = encodeURIComponent(`
-                New business opportunity inquiry received:
+              // Send form data to API endpoint
+              const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+              });
+              
+              const result = await response.json();
+              
+              if (response.ok) {
+                // Show success message
+                formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+                formMessage.className = 'mt-3 text-center text-green-600 font-medium';
+                formMessage.classList.remove('hidden');
                 
-                First Name: ${data.firstName}
-                Last Name: ${data.lastName}
-                Company: ${data.company}
-                Email: ${data.email}
-                Investment Interest: ${data.projectValue}
-                Message: ${data.message}
-              `);
-              
-              // This opens the user's default email client with the pre-filled message
-              window.location.href = `mailto:alandanielalvarez0000@gmail.com?subject=${subject}&body=${body}`;
-              
-              // Show success message
-              formMessage.textContent = 'Thank you! Your message has been prepared. Please check your email client to send.';
-              formMessage.className = 'mt-3 text-center text-green-600 font-medium';
-              formMessage.classList.remove('hidden');
-              
-              // Reset form after a short delay
-              setTimeout(() => {
-                this.reset();
-              }, 1000);
+                // Reset form after a short delay
+                setTimeout(() => {
+                  this.reset();
+                }, 1000);
+              } else {
+                // Show error message from server
+                formMessage.textContent = result.error || 'Sorry, there was an error sending your message. Please try again.';
+                formMessage.className = 'mt-3 text-center text-red-600 font-medium';
+                formMessage.classList.remove('hidden');
+              }
             } catch (error) {
               // Show error message
-              formMessage.textContent = 'Sorry, there was an error preparing your message. Please try again.';
+              formMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
               formMessage.className = 'mt-3 text-center text-red-600 font-medium';
               formMessage.classList.remove('hidden');
+              console.error('Error:', error);
             } finally {
               // Re-enable submit button and restore original text
               submitBtn.disabled = false;
