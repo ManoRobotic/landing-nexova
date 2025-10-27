@@ -64,7 +64,7 @@ export const POST: APIRoute = async ({ request }) => {
       from: import.meta.env.SMTP_USER 
         ? `"Contact Form" <${import.meta.env.SMTP_USER}>`
         : `"Contact Form" <${smtpConfig.auth ? smtpConfig.auth.user : 'test@example.com'}>`, // Use test account user if available
-      to: 'alandanielalvarez0000@gmail.com' // Send to multiple recipients
+      to: 'alandanielalvarez0000@gmail.com', // Send to multiple recipients
       replyTo: email, // Allow replies to go directly to the sender
       subject: `New Contact Form Submission: ${firstName} ${lastName}`,
       html: `
