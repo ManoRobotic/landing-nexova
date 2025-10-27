@@ -3,9 +3,9 @@
 @plugin "@tailwindcss/forms";
 
 @theme {
-  --font-sans: "Inter", sans-serif;
   --color-black: #121212;
-  /* Accent  */
+  --color-white: #ffffff;
+  /* Accent */
   --color-accent-25: #f5fbff;
   --color-accent-50: #ebf7ff;
   --color-accent-100: #d2edff;
@@ -23,6 +23,7 @@
   --color-base-50: #f9fafb;
   --color-base-100: #f3f4f6;
   --color-base-200: #e5e7eb;
+  --color-base-200-rgb: 229, 231, 235;
   --color-base-300: #d1d5db;
   --color-base-400: #9ca3af;
   --color-base-500: #6b7280;
@@ -31,6 +32,11 @@
   --color-base-800: #1f2937;
   --color-base-900: #111827;
   --color-base-950: #030712;
+  /* Dark theme colors */
+  --color-dark-bg: #0f172a;
+  --color-dark-surface: #1e293b;
+  --color-dark-on-surface: #e2e8f0;
+  --color-dark-primary: #38bdf8;
 }
 
 /* CSS */
@@ -39,13 +45,16 @@
 }
 
 @supports (font-variation-settings: normal) {
-
   /* Use variable font if supported */
   :root {
     font-family: InterVariable, sans-serif;
   }
 }
 
+/* Dark mode styles */
+.dark {
+  color-scheme: dark;
+}
 
 /* Adds pointer cursor to buttons */
 button:not(:disabled),

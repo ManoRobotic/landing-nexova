@@ -15,7 +15,7 @@ import "../styles/global.css";
 <meta name="author" content="nexova Solutions" />
 
 <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="/logoregcc.svg" />
+<link rel="icon" type="image/svg+xml" href="/logonexova.svg" />
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
 
 <!-- Apple Touch Icon -->
@@ -59,8 +59,28 @@ import "../styles/global.css";
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
 <!-- Theme Color for Mobile Browsers -->
-<meta name="theme-color" content="#ffffff" />
+<meta name="theme-color" content="#ffffff" id="theme-color" />
 
 <!---- Alpine  -->
 <script is:inline defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js">
+</script>
+
+<!-- Initialize theme based on user preference -->
+<script>
+  // Check for saved theme in localStorage
+  let theme = localStorage.getItem('theme');
+  
+  // If no saved theme, check system preference
+  if (!theme) {
+    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  
+  // Apply the theme to the document element
+  document.documentElement.classList.add(theme);
+  
+  // Update the meta theme-color tag
+  const themeColorMeta = document.getElementById('theme-color');
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute('content', theme === 'dark' ? '#0f172a' : '#ffffff');
+  }
 </script>

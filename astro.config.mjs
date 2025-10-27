@@ -20,6 +20,10 @@ export default defineConfig({
   },
   integrations: [sitemap(), react()],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss({
+        // Add any Tailwind-specific configuration here if needed
+      })
+    ],
   },
 });
