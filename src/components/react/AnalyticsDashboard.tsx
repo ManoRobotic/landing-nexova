@@ -127,69 +127,69 @@ export default function AnalyticsDashboard() {
   const latestMetrics = getLatestMetrics()
 
   return (
-    <div className="w-full mx-auto rounded-lg border border-border bg-card text-card-foreground p-2 sm:p-3">
+    <div className="w-full mx-auto rounded-lg border border-black bg-white text-black p-2 sm:p-3">
       <div className="space-y-3">
           {/* Header with metrics cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
-            <div className="rounded-lg border border-border bg-background p-2">
+            <div className="rounded-lg border border-black bg-white p-2">
               <div className="flex items-center justify-between">
-                <div className="text-[10px] font-medium text-muted-foreground">Revenue</div>
+                <div className="text-[10px] font-medium text-gray-600">Revenue</div>
                 <DollarSign className="h-3 w-3 text-blue-500" />
               </div>
-              <div className="mt-0.5 text-base font-bold">${latestMetrics?.revenue.toFixed(2) || "0.00"}</div>
+              <div className="mt-0.5 text-base font-bold text-black">${latestMetrics?.revenue.toFixed(2) || "0.00"}</div>
               <div className="text-[9px] text-green-500 flex items-center gap-0.5">
                 <TrendingUp className="h-2.5 w-2.5" />
                 +12.5%
               </div>
             </div>
 
-            <div className="rounded-lg border border-border bg-background p-2">
+            <div className="rounded-lg border border-black bg-white p-2">
               <div className="flex items-center justify-between">
-                <div className="text-[10px] font-medium text-muted-foreground">Users</div>
+                <div className="text-[10px] font-medium text-gray-600">Users</div>
                 <Users className="h-3 w-3 text-green-500" />
               </div>
-              <div className="mt-0.5 text-base font-bold">{latestMetrics?.activeUsers.toLocaleString() || "0"}</div>
+              <div className="mt-0.5 text-base font-bold text-black">{latestMetrics?.activeUsers.toLocaleString() || "0"}</div>
               <div className="text-[9px] text-green-500 flex items-center gap-0.5">
                 <TrendingUp className="h-2.5 w-2.5" />
                 +8.2%
               </div>
             </div>
 
-            <div className="rounded-lg border border-border bg-background p-2">
+            <div className="rounded-lg border border-black bg-white p-2">
               <div className="flex items-center justify-between">
-                <div className="text-[10px] font-medium text-muted-foreground">Conv. Rate</div>
+                <div className="text-[10px] font-medium text-gray-600">Conv. Rate</div>
                 <Zap className="h-3 w-3 text-purple-500" />
               </div>
-              <div className="mt-0.5 text-base font-bold">{latestMetrics?.conversionRate.toFixed(2) || "0.00"}%</div>
+              <div className="mt-0.5 text-base font-bold text-black">{latestMetrics?.conversionRate.toFixed(2) || "0.00"}%</div>
               <div className="text-[9px] text-green-500 flex items-center gap-0.5">
                 <TrendingUp className="h-2.5 w-2.5" />
                 +3.1%
               </div>
             </div>
 
-            <div className="rounded-lg border border-border bg-background p-2">
+            <div className="rounded-lg border border-black bg-white p-2">
               <div className="flex items-center justify-between">
-                <div className="text-[10px] font-medium text-muted-foreground">Response</div>
+                <div className="text-[10px] font-medium text-gray-600">Response</div>
                 <Zap className="h-3 w-3 text-orange-500" />
               </div>
-              <div className="mt-0.5 text-base font-bold">{latestMetrics?.responseTime.toFixed(0) || "0"}ms</div>
-              <div className="text-[9px] text-muted-foreground">Avg time</div>
+              <div className="mt-0.5 text-base font-bold text-black">{latestMetrics?.responseTime.toFixed(0) || "0"}ms</div>
+              <div className="text-[9px] text-gray-600">Avg time</div>
             </div>
           </div>
 
           {/* Controls panel */}
-          <div className="rounded-lg border border-border bg-background p-2">
-            <div className="text-[10px] font-semibold mb-1.5">Controls</div>
+          <div className="rounded-lg border border-black bg-white p-2">
+            <div className="text-[10px] font-semibold mb-1.5 text-black">Controls</div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div className="flex items-center gap-2">
-                <Label htmlFor="live-updates" className="text-[10px]">
+                <Label htmlFor="live-updates" className="text-[10px] text-black">
                   {isRunning ? "Live" : "Paused"}
                 </Label>
                 <Switch id="live-updates" checked={isRunning} onCheckedChange={setIsRunning} />
               </div>
 
               <div className="space-y-1">
-                <Label className="text-[10px]">Frequency</Label>
+                <Label className="text-[10px] text-black">Frequency</Label>
                 <div className="flex items-center gap-1.5">
                   <Slider
                     value={[updateInterval]}
@@ -199,12 +199,12 @@ export default function AnalyticsDashboard() {
                     onValueChange={(values) => setUpdateInterval(values[0])}
                     className="flex-1"
                   />
-                  <span className="text-[9px] text-muted-foreground w-10 text-right">{updateInterval}ms</span>
+                  <span className="text-[9px] text-gray-600 w-10 text-right">{updateInterval}ms</span>
                 </div>
               </div>
 
               <div className="space-y-1">
-                <Label className="text-[10px]">Volatility</Label>
+                <Label className="text-[10px] text-black">Volatility</Label>
                 <div className="flex items-center gap-1.5">
                   <Slider
                     value={[volatility]}
@@ -214,7 +214,7 @@ export default function AnalyticsDashboard() {
                     onValueChange={(values) => setVolatility(values[0])}
                     className="flex-1"
                   />
-                  <span className="text-[9px] text-muted-foreground w-10 text-right">{volatility.toFixed(1)}x</span>
+                  <span className="text-[9px] text-gray-600 w-10 text-right">{volatility.toFixed(1)}x</span>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function AnalyticsDashboard() {
           {/* Charts */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3">
             {selectedMetrics.revenue && (
-              <div className="rounded-lg border border-border bg-background p-2">
+              <div className="rounded-lg border border-black bg-white p-2">
                 <ChartContainer config={chartConfig} className="h-[100px] w-full">
                   <AreaChart data={data}>
                     <defs>
@@ -256,7 +256,7 @@ export default function AnalyticsDashboard() {
             )}
 
             {selectedMetrics.activeUsers && (
-              <div className="rounded-lg border border-border bg-background p-2">
+              <div className="rounded-lg border border-black bg-white p-2">
                 <ChartContainer config={chartConfig} className="h-[100px] w-full">
                   <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgb(39, 39, 42)" />
@@ -283,7 +283,7 @@ export default function AnalyticsDashboard() {
             )}
 
             {selectedMetrics.conversionRate && (
-              <div className="rounded-lg border border-border bg-background p-2">
+              <div className="rounded-lg border border-black bg-white p-2">
                 <ChartContainer config={chartConfig} className="h-[100px] w-full">
                   <AreaChart data={data}>
                     <defs>
@@ -316,7 +316,7 @@ export default function AnalyticsDashboard() {
             )}
 
             {selectedMetrics.responseTime && (
-              <div className="rounded-lg border border-border bg-background p-2">
+              <div className="rounded-lg border border-black bg-white p-2">
                 <ChartContainer config={chartConfig} className="h-[100px] w-full">
                   <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgb(39, 39, 42)" />
@@ -344,8 +344,8 @@ export default function AnalyticsDashboard() {
           </div>
 
           {/* Data history table */}
-          <div className="rounded-lg border border-border bg-background p-2">
-            <div className="text-[10px] font-semibold mb-1.5">Recent Data Points</div>
+          <div className="rounded-lg border border-black bg-white p-2">
+            <div className="text-[10px] font-semibold mb-1.5 text-black">Recent Data Points</div>
 
             {/* Mobile: Card layout */}
             <div className="block md:hidden space-y-2">
@@ -353,26 +353,26 @@ export default function AnalyticsDashboard() {
                 .slice(-3)
                 .reverse()
                 .map((point) => (
-                  <div key={point.timestamp} className="rounded border border-border/50 p-2 space-y-1">
-                    <div className="text-[9px] font-mono text-muted-foreground mb-1.5">
+                  <div key={point.timestamp} className="rounded border border-black p-2 space-y-1">
+                    <div className="text-[9px] font-mono text-gray-600 mb-1.5">
                       {formatTimestamp(point.timestamp)}
                     </div>
                     <div className="grid grid-cols-2 gap-1.5 text-[9px]">
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Revenue:</span>
-                        <span className="font-mono">${point.revenue.toFixed(2)}</span>
+                        <span className="text-gray-600">Revenue:</span>
+                        <span className="font-mono text-black">${point.revenue.toFixed(2)}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Users:</span>
-                        <span className="font-mono">{point.activeUsers}</span>
+                        <span className="text-gray-600">Users:</span>
+                        <span className="font-mono text-black">{point.activeUsers}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Conv:</span>
-                        <span className="font-mono">{point.conversionRate.toFixed(2)}%</span>
+                        <span className="text-gray-600">Conv:</span>
+                        <span className="font-mono text-black">{point.conversionRate.toFixed(2)}%</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Time:</span>
-                        <span className="font-mono">{point.responseTime.toFixed(0)}ms</span>
+                        <span className="text-gray-600">Time:</span>
+                        <span className="font-mono text-black">{point.responseTime.toFixed(0)}ms</span>
                       </div>
                     </div>
                   </div>
@@ -383,12 +383,12 @@ export default function AnalyticsDashboard() {
             <div className="hidden md:block overflow-x-auto">
               <table className="w-full text-[9px]">
                 <thead>
-                  <tr className="border-b border-border">
-                    <th className="text-left py-1 px-1 font-medium text-muted-foreground">Time</th>
-                    <th className="text-right py-1 px-1 font-medium text-muted-foreground">Revenue</th>
-                    <th className="text-right py-1 px-1 font-medium text-muted-foreground">Users</th>
-                    <th className="text-right py-1 px-1 font-medium text-muted-foreground">Conv %</th>
-                    <th className="text-right py-1 px-1 font-medium text-muted-foreground">Response</th>
+                  <tr className="border-b border-black">
+                    <th className="text-left py-1 px-1 font-medium text-gray-600">Time</th>
+                    <th className="text-right py-1 px-1 font-medium text-gray-600">Revenue</th>
+                    <th className="text-right py-1 px-1 font-medium text-gray-600">Users</th>
+                    <th className="text-right py-1 px-1 font-medium text-gray-600">Conv %</th>
+                    <th className="text-right py-1 px-1 font-medium text-gray-600">Response</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -396,12 +396,12 @@ export default function AnalyticsDashboard() {
                     .slice(-5)
                     .reverse()
                     .map((point) => (
-                      <tr key={point.timestamp} className="border-b border-border/50 last:border-0">
-                        <td className="py-1 px-1 font-mono">{formatTimestamp(point.timestamp)}</td>
-                        <td className="text-right py-1 px-1 font-mono">${point.revenue.toFixed(2)}</td>
-                        <td className="text-right py-1 px-1 font-mono">{point.activeUsers}</td>
-                        <td className="text-right py-1 px-1 font-mono">{point.conversionRate.toFixed(2)}%</td>
-                        <td className="text-right py-1 px-1 font-mono">{point.responseTime.toFixed(0)}ms</td>
+                      <tr key={point.timestamp} className="border-b border-black last:border-0">
+                        <td className="py-1 px-1 font-mono text-black">{formatTimestamp(point.timestamp)}</td>
+                        <td className="text-right py-1 px-1 font-mono text-black">${point.revenue.toFixed(2)}</td>
+                        <td className="text-right py-1 px-1 font-mono text-black">{point.activeUsers}</td>
+                        <td className="text-right py-1 px-1 font-mono text-black">{point.conversionRate.toFixed(2)}%</td>
+                        <td className="text-right py-1 px-1 font-mono text-black">{point.responseTime.toFixed(0)}ms</td>
                       </tr>
                     ))}
                 </tbody>
