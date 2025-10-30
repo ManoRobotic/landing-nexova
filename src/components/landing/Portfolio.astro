@@ -1,12 +1,44 @@
 ---
 const portfolioItems = [
   {
+    title: "Tuta Privacy Email",
+    description: "Web page for secure email service with end-to-end encryption and quantum-resistant cryptography",
+    image: "/images/tuta.webp",
+    category: "Web Development",
+    technologies: ["Encryption", "Privacy", "Security"],
+    year: "2025"
+  },
+  {
+    title: "Ricola Brand Website",
+    description: "Web page for Swiss herbal drops company with 90 years of history and certified B Corporation status",
+    image: "/images/ricola.webp",
+    category: "Web Development",
+    technologies: ["Web Design", "Sustainability", "Brand Experience"],
+    year: "2025"
+  },
+  {
+    title: "JSConf Guadalajara",
+    description: "Web page for the javascript conference in Guadalajara",
+    image: "/images/jsconf.webp",
+    category: "Web Development",
+    technologies: ["Web Design", "Frontend", "Community"],
+    year: "2025"
+  },
+  {
+    title: "Dodonut Design",
+    description: "Web page for sustainable design agency focused on mindful brands",
+    image: "/images/dodonut.webp",
+    category: "Web Development",
+    technologies: ["Sustainable Design", "UX", "UI"],
+    year: "2025"
+  },
+  {
     title: "Mobile Banking App",
     description: "Secure mobile application that demonstrated significant improvements in user engagement and served as a model for successful funding rounds.",
     image: "/images/mobileBank.webp",
     category: "Mobile Development",
     technologies: ["React Native", "Firebase", "Node.js"],
-    year: "2023"
+    year: "2024"
   },
   {
     title: "AI-Powered Analytics Tool",
@@ -14,7 +46,7 @@ const portfolioItems = [
     image: "/images/n8n.webp",
     category: "AI/ML Solution",
     technologies: ["Python", "TensorFlow", "React"],
-    year: "2024"
+    year: "2025"
   },
   {
     title: "WMS Warehouse Management System",
@@ -22,7 +54,7 @@ const portfolioItems = [
     image: "/images/wms.webp",
     category: "Web Application",
     technologies: ["React", "Node.js", "PostgreSQL"],
-    year: "2024"
+    year: "2025"
   },
   // {
   //   title: "Healthcare Management System",
@@ -38,7 +70,7 @@ const portfolioItems = [
     image: "/images/fitDash.webp",
     category: "Mobile Development",
     technologies: ["Flutter", "Node.js", "MongoDB"],
-    year: "2024"
+    year: "2025"
   },
   {
     title: "IoT Dashboard",
@@ -100,14 +132,22 @@ const portfolioItems = [
               item.title === "AI-Powered Analytics Tool" ?
                 "/automation-services" :
               item.title === "Medical Dashboard" ?
-                "https://v0-medical-app-patent-theta.vercel.app/" : "#"}
+                "https://v0-medical-app-patent-theta.vercel.app/" :
+              item.title === "Ricola Brand Website" ?
+                "https://www.ricola.com/" :
+              item.title === "JSConf Guadalajara" ?
+                "https://www.jsconf.mx/" :
+              item.title === "Tuta Privacy Email" ?
+                "https://tuta.com/es" :
+              item.title === "Dodonut Design" ?
+                "https://dodonut.com/" : "#"}
             class="block">
 
               <div class="h-auto overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  class={item.title === "WMS Warehouse Management System" || item.title === "IoT Dashboard" || item.title === "AI-Powered Analytics Tool" ? "w-full aspect-square object-cover" : "w-full aspect-square object-contain"}
+                  class="w-full aspect-square object-cover"
                   width="400"
                   height="400"
                 />
